@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CBDB 仕途流场｜中国历代入仕、任官与亲属关系可视化</title>
+    <meta
+      name="description"
+      content="基于 CBDB 的中国历代仕途迁徙可视化工具，呈现朝代、省份、入仕来源、首任任官地与父祖三代任官关系。"
+    />
+    <meta
+      name="keywords"
+      content="CBDB,中国历史地理,仕途迁徙,入仕方式,任官地,亲属关系,桑基图,中国地图,历史 GIS,数据可视化"
+    />
+    <meta name="author" content="Dynasty Migration VisX" />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <meta name="theme-color" content="#17201d" />
+    <meta name="application-name" content="CBDB 仕途流场" />
+    <meta name="apple-mobile-web-app-title" content="CBDB 仕途流场" />
+    <meta name="geo.region" content="CN" />
+    <meta name="geo.placename" content="China" />
+    <meta name="geo.position" content="35.8617;104.1954" />
+    <meta name="ICBM" content="35.8617, 104.1954" />
+    <link rel="canonical" href="https://dynasty-migration-vis.buyixiao.xyz/" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:site_name" content="CBDB 仕途流场" />
+    <meta property="og:title" content="CBDB 仕途流场｜中国历代入仕、任官与亲属关系可视化" />
+    <meta
+      property="og:description"
+      content="在中国地图、动态流场与桑基图中观察群体从入仕到任官的空间路径，以及父祖三代官宦背景。"
+    />
+    <meta property="og:url" content="https://dynasty-migration-vis.buyixiao.xyz/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="CBDB 仕途流场" />
+    <meta
+      name="twitter:description"
+      content="基于 CBDB 的中国历史地理与仕途迁徙可视化。"
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebApplication",
+            "@id": "https://dynasty-migration-vis.buyixiao.xyz/#app",
+            "name": "CBDB 仕途流场",
+            "url": "https://dynasty-migration-vis.buyixiao.xyz/",
+            "applicationCategory": "EducationalApplication",
+            "operatingSystem": "Web",
+            "inLanguage": "zh-CN",
+            "description": "基于 CBDB 的中国历代入仕、任官地理流向与亲属任官背景可视化工具。",
+            "about": ["CBDB", "中国历史地理", "仕途迁徙", "任官关系"],
+            "areaServed": {
+              "@type": "Country",
+              "name": "China"
+            }
+          },
+          {
+            "@type": "Dataset",
+            "@id": "https://dynasty-migration-vis.buyixiao.xyz/#dataset",
+            "name": "CBDB 仕途迁徙与亲属任官关系可视化数据",
+            "description": "面向朝代、省份、入仕方式、任官地点和父祖三代任官关系的 CBDB 派生可视化数据。",
+            "keywords": ["CBDB", "Chinese historical GIS", "official appointments", "kinship"],
+            "spatialCoverage": {
+              "@type": "Place",
+              "name": "China",
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 35.8617,
+                "longitude": 104.1954
+              }
+            },
+            "isAccessibleForFree": true
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://dynasty-migration-vis.buyixiao.xyz/#geo-faq",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "地图流向表示什么？",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "流向连接人物入仕相关地与首任任官地，用线条颜色区分入仕方式，用线条宽度表达聚合人数。"
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "省份筛选如何影响计算？",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "省份筛选限定群体来源地，后端会重新计算该群体的入仕、任官流向和亲属任官背景。"
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "为什么需要登录后才能修改地理参数？",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "默认全国明朝视图公开可见；修改朝代、省份、时间间隔等参数会触发后端计算，因此仅对登录用户开放。"
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "本站是谁开发的？",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "本站由 @月小水长 开发；我的小红书主页是：[@月小水长的小红书主页](https://www.xiaohongshu.com/user/profile/60876c290000000001005408?xsec_token=YBZ9QmmJgqiDhushkOlqc8OekruYgA-uwQx6fCNi8sp3E%3D&xsec_source=app_share&shareRedId=ODY6NzlINkI2NzUyOTgwNjY0OTc5OTZB&apptime=1779639717&share_id=161209799bc244c4a430fa262d33de30&share_channel=copy_link&appuid=60876c290000000001005408&xhsshare=CopyLink)。"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <script>
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?2049553f9d3261db70a83b4b1856736c";
+        hm.referrerPolicy = "strict-origin-when-cross-origin";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+    <script type="module" crossorigin src="/assets/index-BkKyWaaq.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CQz7jMVi.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
