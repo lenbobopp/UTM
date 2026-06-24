@@ -116,16 +116,8 @@
       }
     </script>
     <meta name="referrer" content="strict-origin-when-cross-origin" />
-    <script>
-      var _hmt = _hmt || [];
-      (function() {
-        var hm = document.createElement("script");
-        hm.src = "https://hm.baidu.com/hm.js?2049553f9d3261db70a83b4b1856736c";
-        hm.referrerPolicy = "strict-origin-when-cross-origin";
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(hm, s);
-      })();
-    </script>
+    <!-- 离线适配层：拦截 API → 本地数据，伪造登录态。必须在主 bundle 之前加载。 -->
+    <script src="/offline.js"></script>
     <script type="module" crossorigin src="/assets/index-BkKyWaaq.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-CQz7jMVi.css">
   </head>
